@@ -7,7 +7,7 @@ public class PizzaCalculator {
 
     private double preTaxTotal=0;
     private double grandTotal=0;
-    private double tipRate = .18;
+    private double tipRate = .15;
     private double tipAmount=0;
     private double totalBill=0;
     private boolean roundUp = false;
@@ -25,20 +25,20 @@ public class PizzaCalculator {
 
     public void updateCalculator(){
         if (this.preTaxTotal < 20){
-            this.tipAmount = 3;
-            checkWeatherDistance();
+            this.tipAmount = min;
+            checkConditions();
         } else {
             this.tipAmount = roundUpToPenny(this.tipRate * this.preTaxTotal);
-            checkWeatherDistance();
+            checkConditions();
+        }
+        this.grandTotal = calcGrandTotal();
+        if (this.roundUp) {
+            this.tipAmount += Math.ceil(this.grandTotal) - this.grandTotal;
             this.grandTotal = calcGrandTotal();
-            if (this.roundUp) {
-                this.tipAmount += Math.ceil(this.grandTotal) - this.grandTotal;
-                this.grandTotal = calcGrandTotal();
-            }
         }
     }
 
-    private void checkWeatherDistance(){
+    private void checkConditions(){
         if (distance > 3 && distance<= 5){
             this.tipAmount = this.tipAmount + threeMile;
         } else if (distance > 5){
@@ -118,5 +118,23 @@ public class PizzaCalculator {
     public void setRoundUp(boolean roundUp) {
         this.roundUp = roundUp;
     }
+
+
+    public boolean isBadWeather() {
+        return badWeather;
+    }
+
+    public void setBadWeather(boolean badWeather) {
+        this.badWeather = badWeather;
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
 
 }

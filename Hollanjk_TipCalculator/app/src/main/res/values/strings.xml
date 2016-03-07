@@ -9,4 +9,8 @@
     <string name="tip">Selected Tip</string>
     <string name="grandTotal">New Grand Total</string>
     <string name="roundUp">Round up grand total to nearest dollar?</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="delivery">Delivery</string>
+    <string name="distance">Distance of Delivery</string>
+    <string name="normalPizza">Normal 15%</string>
 </resources>
