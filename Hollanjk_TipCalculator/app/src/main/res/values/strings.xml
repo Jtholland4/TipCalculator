@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Hollanjk_TipCalculator</string>
+    <string name="preTax">Total Bill Before Tax</string>
+    <string name="totalBill">Original Total Bill</string>
+    <string name="excellent">Excellent 20%</string>
+    <string name="normal">Normal 18%</string>
+    <string name="poor">Poor 15%</string>
+    <string name="veryBad">Very Bad 0%</string>
+    <string name="tip">Selected Tip</string>
+    <string name="grandTotal">New Grand Total</string>
+    <string name="roundUp">Round up grand total to nearest dollar?</string>
+</resources>
